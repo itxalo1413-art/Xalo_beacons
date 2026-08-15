@@ -13,16 +13,16 @@ export function SocialBar() {
       <p className="text-base sm:text-lg md:text-xl font-medium text-foreground mb-3">
         Liên hệ với chúng mình qua:
       </p>
-      <div className="rounded-full bg-[#9494FF] px-7 py-2.5 flex items-center justify-center gap-6 shadow-sm">
+      <div className="flex items-center justify-center gap-4 sm:gap-6">
         {/* TikTok */}
         <a
           href="https://www.tiktok.com/@xalo.english"
           target="_blank"
           rel="noreferrer"
           aria-label="TikTok"
-          className="text-white transition-opacity hover:opacity-75 p-1"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FCC0C5] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-sm hover:scale-110"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-7 sm:h-7" aria-hidden="true">
             <path d="M16.5 3c.3 2.1 1.6 3.6 3.7 3.8v2.4c-1.3.1-2.5-.3-3.7-1v5.9c0 4.6-4.4 6.9-8 5.1-2.3-1.2-3.3-3.8-2.7-6.2.6-2.3 2.7-3.9 5.2-3.8v2.5c-.5.1-1 .2-1.4.4-1.2.5-1.7 1.9-1.2 3 .5 1.2 1.9 1.7 3.1 1.2.8-.4 1.4-1.2 1.4-2.1V3h3.6z" />
           </svg>
         </a>
@@ -33,9 +33,9 @@ export function SocialBar() {
           target="_blank"
           rel="noreferrer"
           aria-label="Instagram"
-          className="text-white transition-opacity hover:opacity-75 p-1"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FCC0C5] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-sm hover:scale-110"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-6 h-6 sm:w-7 sm:h-7" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5" />
             <circle cx="12" cy="12" r="4" />
             <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none" />
@@ -48,9 +48,9 @@ export function SocialBar() {
           target="_blank"
           rel="noreferrer"
           aria-label="Facebook"
-          className="text-white transition-opacity hover:opacity-75 p-1"
+          className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FCC0C5] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-sm hover:scale-110"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-7 sm:h-7" aria-hidden="true">
             <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
           </svg>
         </a>
@@ -82,14 +82,14 @@ export default function Header({ onShowToast }: HeaderProps) {
       </div>
 
       {/* Main Title & Tagline */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground tracking-tight mb-2">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#6A5ACD] tracking-tight mb-2">
         Xa Lộ English
       </h1>
       <div className="w-full max-w-5xl mx-auto mb-8">
-        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[72px] text-foreground tracking-tight leading-tight sm:leading-[1.15]">
+        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[66px] text-foreground tracking-tight leading-tight sm:leading-[1.15]">
           Học đúng cách khi hiểu đúng mình
         </p>
-        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[72px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1">
+        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[66px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1">
           cùng quy trình chẩn chữa
         </p>
       </div>
@@ -141,16 +141,6 @@ export default function Header({ onShowToast }: HeaderProps) {
           <Phone className="w-5 h-5 text-[#9494FF] shrink-0" />
           <span>Hotline: 0786688149</span>
         </button>
-        <button
-          onClick={copyAddress}
-          className="inline-flex items-center justify-center gap-2 hover:text-[#9494FF] transition-colors cursor-pointer group text-center break-words max-w-full"
-          title="Bấm để sao chép địa chỉ"
-        >
-          <MapPin className="w-5 h-5 text-[#9494FF] shrink-0" />
-          <span>Địa chỉ: 250 Nguyễn Đình Chính, phường Phú Nhuận, TPHCM</span>
-        </button>
-
-        
       </div>
     </header>
   );

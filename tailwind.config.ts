@@ -9,7 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Bricolage Grotesque'", "sans-serif"],
+        sans: [
+          "'gg sans'",
+          "'gg sans Bold'",
+          "'Plus Jakarta Sans'",
+          "'Inter'",
+          "'Bricolage Grotesque'",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       colors: {
         brand: {

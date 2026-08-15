@@ -86,10 +86,10 @@ export default function Header({ onShowToast }: HeaderProps) {
         Xa Lộ English
       </h1>
       <div className="w-full max-w-5xl mx-auto mb-8">
-        <p className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] text-foreground tracking-tight leading-tight sm:leading-[1.15]">
+        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[72px] text-foreground tracking-tight leading-tight sm:leading-[1.15]">
           Học đúng cách khi hiểu đúng mình
         </p>
-        <p className="text-3xl sm:text-5xl md:text-6xl lg:text-[72px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1">
+        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[72px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1">
           cùng quy trình chẩn chữa
         </p>
       </div>
@@ -134,6 +134,14 @@ export default function Header({ onShowToast }: HeaderProps) {
       {/* Address & Hotline Info (Centered with Icons matching text size) */}
       <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center text-foreground text-base sm:text-lg md:text-xl font-medium space-y-2 px-4 text-center">
         <button
+          onClick={copyHotline}
+          className="inline-flex items-center justify-center gap-2 hover:text-[#9494FF] transition-colors cursor-pointer group text-center"
+          title="Bấm để sao chép số hotline"
+        >
+          <Phone className="w-5 h-5 text-[#9494FF] shrink-0" />
+          <span>Hotline: 0786688149</span>
+        </button>
+        <button
           onClick={copyAddress}
           className="inline-flex items-center justify-center gap-2 hover:text-[#9494FF] transition-colors cursor-pointer group text-center break-words max-w-full"
           title="Bấm để sao chép địa chỉ"
@@ -142,14 +150,7 @@ export default function Header({ onShowToast }: HeaderProps) {
           <span>Địa chỉ: 250 Nguyễn Đình Chính, phường Phú Nhuận, TPHCM</span>
         </button>
 
-        <button
-          onClick={copyHotline}
-          className="inline-flex items-center justify-center gap-2 hover:text-[#9494FF] transition-colors cursor-pointer group text-center"
-          title="Bấm để sao chép số hotline"
-        >
-          <Phone className="w-5 h-5 text-[#9494FF] shrink-0" />
-          <span>Hotline: 0786688149</span>
-        </button>
+        
       </div>
     </header>
   );

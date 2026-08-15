@@ -215,20 +215,20 @@ export default function HallOfFame() {
     <section className="w-full max-w-7xl mx-auto my-14 px-4 sm:px-6 lg:px-8">
       <div className="bg-brand-tint p-6 sm:p-10 lg:p-12 rounded-3xl border border-border shadow-xs">
         {/* Section Title */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-1.5 text-brand-deep bg-brand-soft px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2.5">
-            <Award className="w-4 h-4 text-brand" />
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 text-brand-deep bg-brand-soft px-5 py-1.5 rounded-full text-sm sm:text-base font-extrabold uppercase tracking-wider mb-3">
+            <Award className="w-5 h-5 text-brand" />
             <span>Thành tích nổi bật</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground uppercase tracking-wide">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground uppercase tracking-wide">
             BẢNG VÀNG HỌC VIÊN
           </h2>
-          <p className="text-muted-foreground text-xs sm:text-sm md:text-base mt-1.5">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-xl font-medium mt-2.5">
             Hàng ngàn học viên bứt phá điểm số IELTS cùng Xa Lộ English
           </p>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-2.5 mt-5">
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
             {[
               { label: "Tất cả học viên", value: "ALL" },
               { label: "Band 8.0+", value: "8.0+" },
@@ -237,9 +237,9 @@ export default function HallOfFame() {
               <button
                 key={tab.value}
                 onClick={() => setSelectedFilter(tab.value)}
-                className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                className={`px-6 py-2.5 rounded-full text-sm sm:text-base md:text-lg font-extrabold transition-all cursor-pointer ${
                   selectedFilter === tab.value
-                    ? "bg-brand-deep text-white shadow-sm scale-105"
+                    ? "bg-brand-deep text-white shadow-md scale-105"
                     : "bg-background text-foreground hover:bg-brand-soft border border-border"
                 }`}
               >

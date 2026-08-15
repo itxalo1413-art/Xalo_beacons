@@ -8,7 +8,7 @@ interface PromoBannerProps {
 
 export default function PromoBanner({ onOpenModal }: PromoBannerProps) {
   return (
-    <section className="w-full max-w-7xl mx-auto mt-6 mb-2 px-4 sm:px-6 lg:px-8 flex justify-center">
+    <section className="w-full max-w-7xl mx-auto mt-4 mb-0 px-4 sm:px-6 lg:px-8 flex justify-center">
       <a
         href="https://forms.gle/GXuqNRKJPCJ59sx59"
         target="_blank"

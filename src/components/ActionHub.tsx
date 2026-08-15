@@ -14,11 +14,11 @@ export function LinkGroup({
   onItemClick?: (label: string) => void;
 }) {
   return (
-    <div className="rounded-[28px] border-2 border-foreground/90 bg-background/95 px-6 py-4 backdrop-blur-sm shadow-xs w-full">
-      <h3 className="text-center text-sm sm:text-base font-extrabold uppercase tracking-wide text-foreground mb-3">
+    <div className="rounded-[28px] border-2 border-foreground/90 bg-background/95 px-6 py-6 backdrop-blur-sm shadow-xs w-full">
+      <h3 className="text-center text-xl sm:text-2xl lg:text-3xl font-black uppercase tracking-wider text-foreground mb-4">
         {title}
       </h3>
-      <div className="flex flex-col items-center gap-2.5">
+      <div className="flex flex-col items-center gap-3">
         {items.map((it) => {
           if (it.href) {
             return (
@@ -27,7 +27,7 @@ export function LinkGroup({
                 href={it.href}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full max-w-[340px] rounded-full border-2 border-foreground/90 bg-background px-5 py-2 text-center text-xs sm:text-sm text-foreground transition-all hover:bg-foreground hover:text-background font-semibold cursor-pointer shadow-2xs hover:shadow-sm block"
+                className="w-full max-w-[460px] rounded-full border-2 border-foreground/90 bg-background px-6 py-3.5 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-foreground hover:text-background font-bold cursor-pointer shadow-2xs hover:shadow-sm block"
               >
                 {it.label}
               </a>
@@ -38,7 +38,7 @@ export function LinkGroup({
               key={it.label}
               type="button"
               onClick={() => onItemClick?.(it.label)}
-              className="w-full max-w-[340px] rounded-full border-2 border-foreground/90 bg-background px-5 py-2 text-center text-xs sm:text-sm text-foreground transition-all hover:bg-foreground hover:text-background font-semibold cursor-pointer shadow-2xs hover:shadow-sm"
+              className="w-full max-w-[460px] rounded-full border-2 border-foreground/90 bg-background px-6 py-3.5 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-foreground hover:text-background font-bold cursor-pointer shadow-2xs hover:shadow-sm"
             >
               {it.label}
             </button>
@@ -82,10 +82,10 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
   ];
 
   return (
-    <section className="w-full max-w-6xl mx-auto mt-3 mb-10 px-4 sm:px-6">
+    <section className="w-full max-w-6xl mx-auto mt-1 mb-10 px-4 sm:px-6">
       <div className="relative flex flex-col lg:flex-row items-center justify-between gap-6">
         {/* Left Column: 3 LinkGroups */}
-        <div className="w-full lg:w-[62%] space-y-4 z-10">
+        <div className="w-full lg:w-[64%] space-y-5 z-10">
           <LinkGroup
             title="NHẬN ƯU ĐÃI"
             items={group1}

@@ -72,15 +72,15 @@ export default function Header({ onShowToast }: HeaderProps) {
 
   return (
     <header className="relative w-full overflow-hidden pt-8 pb-4">
-      {/* Background Image: positioned in header at z-0, above main background, below header content (z-10) */}
+      {/* Background Image: positioned in header at z-1, above main background, below header content (z-10) */}
       <div className="absolute inset-0 z-1 pointer-events-none select-none overflow-hidden">
         <img
           src="/images/bg.png"
           alt=""
-          className="w-full h-full object-cover object-top opacity-30"
+          className="w-full h-full object-cover object-top opacity-15"
         />
         {/* Gradient overlay to seamlessly fade into page background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/20 via-transparent to-slate-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/40 via-transparent to-slate-50" />
       </div>
 
       {/* Header Content with z-10 */}
@@ -95,7 +95,7 @@ export default function Header({ onShowToast }: HeaderProps) {
         </div>
 
         {/* Main Title & Tagline */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#6A5ACD] tracking-tight mb-2 mt-4">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#9494FF] tracking-tight mb-2 mt-4">
           Xa Lộ English
         </h1>
         <div className="w-full max-w-5xl mx-auto mb-8">
@@ -103,7 +103,7 @@ export default function Header({ onShowToast }: HeaderProps) {
             HỌC ĐÚNG CÁCH KHI HIỂU ĐÚNG MÌNH
           </p>
           <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
-            CÙNG QUY TRÌNH CHẨN CHỮA
+            CÙNG <span className="text-[#FE7789]">QUY TRÌNH CHẨN CHỮA</span>
           </p>
         </div>
 

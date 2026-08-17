@@ -77,7 +77,7 @@ export default function Header({ onShowToast }: HeaderProps) {
         <img
           src="/images/bg.png"
           alt=""
-          className="w-full h-full object-cover object-top opacity-15"
+          className="w-full h-full object-cover object-top opacity-[0.13]"
         />
         {/* Gradient overlay to seamlessly fade into page background */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50/40 via-transparent to-slate-50" />
@@ -98,12 +98,12 @@ export default function Header({ onShowToast }: HeaderProps) {
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#9494FF] tracking-tight mb-2 mt-4">
           Xa Lộ English
         </h1>
-        <div className="w-full max-w-5xl mx-auto mb-8">
-          <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] font-bold mt-4 sm:mt-8">
+        <div className="w-full max-w-6xl mx-auto mb-8">
+          <p className="text-xl sm:text-4xl md:text-6xl lg:text-[56px] text-foreground tracking-tight leading-tight sm:leading-[1.15] font-bold mt-4 sm:mt-8">
             HỌC ĐÚNG CÁCH KHI HIỂU ĐÚNG MÌNH
           </p>
-          <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
-            CÙNG <span className="text-[#FE7789]">QUY TRÌNH CHẨN CHỮA</span>
+          <p className="text-xl sm:text-4xl md:text-6xl lg:text-[48px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
+            CÙNG <span className="text-[#FE7789] lg:text-[56px]">QUY TRÌNH CHẨN CHỮA</span>
           </p>
         </div>
 

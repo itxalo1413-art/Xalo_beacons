@@ -16,42 +16,45 @@ export function LinkGroup({
   onItemClick?: (label: string) => void;
 }) {
   return (
-    <div className="rounded-[28px] border-2 border-[#9494FF] bg-background/95 px-6 sm:px-8 py-5 backdrop-blur-sm shadow-xs w-full">
-      {/* Title badge aligned to start */}
-      <div className="flex justify-start mb-3 sm:ml-2">
-        <span
-          className={`inline-block rounded-full ${badgeBg} px-6 py-1.5 text-center text-base sm:text-xl lg:text-2xl font-black text-white uppercase tracking-wider shadow-sm border border-white/30`}
-        >
-          {title}
-        </span>
-      </div>
-      {/* Buttons aligned to start with dynamic width fitting content */}
-      <div className="flex flex-col items-start gap-2.5 sm:ml-2">
-        {items.map((it) => {
-          if (it.href) {
+    <div className="rounded-[32px] border-2 border-[#9494FF] bg-background/95 px-6 sm:px-10 py-5 backdrop-blur-sm shadow-xs w-full">
+      {/* Content wrapper: centered on mobile, positioned on desktop, with title badge centered relative to buttons */}
+      <div className="w-full max-w-[460px] mx-auto lg:mx-0 lg:ml-6 flex flex-col items-center">
+        {/* Title Badge: centered relative to the buttons below */}
+        <div className="flex justify-center mb-3 w-full">
+          <span
+            className={`inline-block rounded-full ${badgeBg} px-6 py-1.5 text-center text-base sm:text-xl lg:text-2xl font-black text-white uppercase tracking-wider shadow-sm border border-white/30`}
+          >
+            {title}
+          </span>
+        </div>
+        {/* Buttons List */}
+        <div className="flex flex-col items-center gap-2.5 w-full">
+          {items.map((it) => {
+            if (it.href) {
+              return (
+                <a
+                  key={it.label}
+                  href={it.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full rounded-full border-2 border-foreground/90 bg-background px-6 py-3 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm block"
+                >
+                  {it.label}
+                </a>
+              );
+            }
             return (
-              <a
+              <button
                 key={it.label}
-                href={it.href}
-                target="_blank"
-                rel="noreferrer"
-                className="w-fit max-w-full rounded-full border-2 border-foreground/90 bg-background px-6 sm:px-8 py-2.5 sm:py-3 text-left text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm inline-flex items-center justify-start"
+                type="button"
+                onClick={() => onItemClick?.(it.label)}
+                className="w-full rounded-full border-2 border-foreground/90 bg-background px-6 py-3 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm"
               >
                 {it.label}
-              </a>
+              </button>
             );
-          }
-          return (
-            <button
-              key={it.label}
-              type="button"
-              onClick={() => onItemClick?.(it.label)}
-              className="w-fit max-w-full rounded-full border-2 border-foreground/90 bg-background px-6 sm:px-8 py-2.5 sm:py-3 text-left text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm inline-flex items-center justify-start"
-            >
-              {it.label}
-            </button>
-          );
-        })}
+          })}
+        </div>
       </div>
     </div>
   );
@@ -91,10 +94,10 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
 
   return (
     <section className="w-full max-w-7xl mx-auto mt-12 sm:mt-32 mb-10 px-4 sm:px-6">
-      {/* Relative wrapper so image can be absolutely positioned */}
+      {/* Relative wrapper so image can be absolutely positioned over extended cards */}
       <div className="relative">
-        {/* Cards column — extended wide across the section so the right side sits under the students */}
-        <div className="w-full lg:w-[82%] xl:w-[85%] space-y-3 z-10 relative">
+        {/* Cards column — extended wide (85% ~ 90%) across the container so the right side sits under the students */}
+        <div className="w-full lg:w-[86%] xl:w-[90%] space-y-3 z-10 relative">
           <LinkGroup
             title="NHẬN ƯU ĐÃI"
             items={group1}
@@ -116,7 +119,7 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
         </div>
 
         {/* Student image — absolutely positioned on desktop, overlapping the right edge of the extended cards */}
-        <div className="hidden lg:block absolute top-1/3 -translate-y-1/2 -right-[10%] xl:-right-[8%] w-[75%] z-20 pointer-events-none">
+        <div className="hidden lg:block absolute top-1/3 -translate-y-1/2 -right-[15%] w-[77%] z-20 pointer-events-none">
           <img
             src="/images/group.png"
             alt="Đội ngũ Học viên Xa Lộ English"

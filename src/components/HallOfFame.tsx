@@ -247,12 +247,12 @@ export default function HallOfFame() {
 
           {/* Pink Title Badge for BẢNG VÀNG HỌC VIÊN */}
           <div className="flex justify-center mb-6 sm:mb-8">
-            <h2 className="inline-block bg-[#FE7789] text-white px-8 py-3.5 sm:px-12 sm:py-4 rounded-full text-xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide shadow-md">
+            <h2 className="inline-block bg-[#FE7789] text-white px-8 py-2.5 sm:px-10 sm:py-3 lg:px-10 lg:py-3 rounded-full text-xl sm:text-3xl lg:text-[38px] xl:text-[40px] font-black uppercase tracking-wide shadow-md">
               BẢNG VÀNG HỌC VIÊN
             </h2>
           </div>
 
-          <p className="text-muted-foreground text-base sm:text-lg md:text-2xl font-medium">
+          <p className="text-muted-foreground text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
             Hàng ngàn học viên bứt phá điểm số IELTS cùng Xa Lộ English
           </p>
 

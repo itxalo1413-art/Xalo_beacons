@@ -10,19 +10,19 @@ interface HeaderProps {
 export function SocialBar() {
   return (
     <div className="inline-flex flex-col items-center justify-center text-center">
-      <p className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-4">
+      <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-5">
         Liên hệ với chúng mình qua:
       </p>
-      <div className="w-full max-w-[320px] sm:max-w-[380px] flex items-center justify-between mx-auto">
+      <div className="w-full max-w-[360px] sm:max-w-[440px] md:max-w-[480px] flex items-center justify-between mx-auto">
         {/* TikTok */}
         <a
           href="https://www.tiktok.com/@xalo.english"
           target="_blank"
           rel="noreferrer"
           aria-label="TikTok"
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FE7789] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-md hover:scale-110"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FE7789] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-md hover:scale-110"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 sm:w-10 sm:h-10" aria-hidden="true">
             <path d="M16.5 3c.3 2.1 1.6 3.6 3.7 3.8v2.4c-1.3.1-2.5-.3-3.7-1v5.9c0 4.6-4.4 6.9-8 5.1-2.3-1.2-3.3-3.8-2.7-6.2.6-2.3 2.7-3.9 5.2-3.8v2.5c-.5.1-1 .2-1.4.4-1.2.5-1.7 1.9-1.2 3 .5 1.2 1.9 1.7 3.1 1.2.8-.4 1.4-1.2 1.4-2.1V3h3.6z" />
           </svg>
         </a>
@@ -33,9 +33,9 @@ export function SocialBar() {
           target="_blank"
           rel="noreferrer"
           aria-label="Instagram"
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FE7789] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-md hover:scale-110"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FE7789] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-md hover:scale-110"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 sm:w-10 sm:h-10" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5" />
             <circle cx="12" cy="12" r="4" />
             <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none" />
@@ -48,9 +48,9 @@ export function SocialBar() {
           target="_blank"
           rel="noreferrer"
           aria-label="Facebook"
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#FE7789] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-md hover:scale-110"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FE7789] hover:bg-[#6A5ACD] flex items-center justify-center text-white transition-all shadow-md hover:scale-110"
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 sm:w-10 sm:h-10" aria-hidden="true">
             <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
           </svg>
         </a>
@@ -82,7 +82,7 @@ export default function Header({ onShowToast }: HeaderProps) {
       </div>
 
       {/* Main Title & Tagline */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#6A5ACD] tracking-tight mb-2 uppercase">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#6A5ACD] tracking-tight mb-2 mt-4">
         Xa Lộ English
       </h1>
       <div className="w-full max-w-5xl mx-auto mb-8">
@@ -131,14 +131,14 @@ export default function Header({ onShowToast }: HeaderProps) {
         <SocialBar />
       </div>
 
-      {/* Hotline Info (Restored black color) */}
+      {/* Hotline Info */}
       <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center space-y-2 px-4 text-center">
         <button
           onClick={copyHotline}
-          className="inline-flex items-center justify-center gap-2 text-lg sm:text-xl md:text-2xl font-extrabold text-foreground hover:text-[#FE7789] transition-colors cursor-pointer group text-center"
+          className="inline-flex items-center justify-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground hover:text-[#FE7789] transition-colors cursor-pointer group text-center"
           title="Bấm để sao chép số hotline"
         >
-          <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-foreground shrink-0" />
+          <Phone className="w-7 h-7 sm:w-8 sm:h-8 text-foreground shrink-0" />
           <span>Hotline: 0786688149</span>
         </button>
       </div>

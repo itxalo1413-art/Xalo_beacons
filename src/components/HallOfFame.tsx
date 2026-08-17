@@ -55,7 +55,7 @@ export function ReviewCard({
       <div className="mt-6 flex justify-center pt-2">
         <button
           onClick={onViewMore}
-          className="w-full bg-[#FE7789] hover:bg-[#e66375] text-white font-bold py-2.5 px-5 rounded-full text-xs sm:text-sm transition-all shadow-sm cursor-pointer text-center"
+          className="w-full bg-[#6A5ACD] hover:bg-[#523ae0] text-white font-bold py-2.5 px-5 rounded-full text-xs sm:text-sm transition-all shadow-sm cursor-pointer text-center"
         >
           Xem chi tiết bảng điểm ➔
         </button>
@@ -221,25 +221,25 @@ export default function HallOfFame() {
       <div className="bg-brand-tint p-6 sm:p-10 lg:p-12 rounded-3xl border border-border shadow-xs">
         
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-3 text-brand-deep bg-brand-soft px-5 py-1.5 rounded-full text-sm sm:text-base font-extrabold uppercase tracking-wider mb-4 shadow-2xs">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-3 text-brand-deep bg-brand-soft px-6 py-2 rounded-full text-sm sm:text-base font-extrabold uppercase tracking-wider mb-6 sm:mb-8 shadow-2xs">
             <Award className="w-5 h-5 text-brand" />
             <span>Thành tích nổi bật</span>
           </div>
 
           {/* Pink Title Badge for BẢNG VÀNG HỌC VIÊN */}
-          <div className="flex justify-center mb-3">
-            <h2 className="inline-block bg-[#FE7789] text-white px-8 py-3 rounded-full text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide shadow-md">
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <h2 className="inline-block bg-[#FE7789] text-white px-8 py-3.5 sm:px-12 sm:py-4 rounded-full text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-wide shadow-md">
               BẢNG VÀNG HỌC VIÊN
             </h2>
           </div>
 
-          <p className="text-muted-foreground text-sm sm:text-base md:text-xl font-medium mt-3">
+          <p className="text-muted-foreground text-base sm:text-lg md:text-2xl font-medium">
             Hàng ngàn học viên bứt phá điểm số IELTS cùng Xa Lộ English
           </p>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-10 sm:mt-12">
             {[
               { label: "Tất cả học viên", value: "ALL" },
               { label: "Band 8.0+", value: "8.0+" },

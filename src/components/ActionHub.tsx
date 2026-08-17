@@ -119,7 +119,7 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
         </div>
 
         {/* Student image — absolutely positioned on desktop, overlapping the right edge of the extended cards */}
-        <div className="hidden lg:block absolute top-1/3 -translate-y-1/2 -right-[10%] w-[55%] z-20 pointer-events-none">
+        <div className="hidden lg:block absolute top-1/3 -translate-y-1/2 -right-[10%] w-[60%] z-20 pointer-events-none">
           <img
             src="/images/group.png"
             alt="Đội ngũ Học viên Xa Lộ English"

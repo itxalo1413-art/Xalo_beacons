@@ -71,76 +71,90 @@ export default function Header({ onShowToast }: HeaderProps) {
   };
 
   return (
-    <header className="w-full max-w-7xl mx-auto flex flex-col items-center text-center pt-8 pb-4 px-4 sm:px-6 lg:px-8">
-      {/* Brand Logo */}
-      <div className="mb-4 flex justify-center cursor-pointer hover:opacity-95 transition-opacity">
+    <header className="relative w-full overflow-hidden pt-8 pb-4">
+      {/* Background Image: positioned in header at z-0, above main background, below header content (z-10) */}
+      <div className="absolute inset-0 z-1 pointer-events-none select-none overflow-hidden">
         <img
-          src="/Logo_XLE.svg"
-          alt="Xa Lộ English Logo"
-          className="w-16 sm:w-22 md:w-24 h-auto object-contain"
+          src="/images/bg.png"
+          alt=""
+          className="w-full h-full object-cover object-top opacity-30"
         />
+        {/* Gradient overlay to seamlessly fade into page background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/20 via-transparent to-slate-50" />
       </div>
 
-      {/* Main Title & Tagline */}
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#6A5ACD] tracking-tight mb-2 mt-4">
-        Xa Lộ English
-      </h1>
-      <div className="w-full max-w-5xl mx-auto mb-8">
-        <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] font-bold mt-4 sm:mt-8">
-          HỌC ĐÚNG CÁCH KHI HIỂU ĐÚNG MÌNH
-        </p>
-        <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
-          CÙNG QUY TRÌNH CHẨN CHỮA
-        </p>
-      </div>
+      {/* Header Content with z-10 */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
+        {/* Brand Logo */}
+        <div className="mb-4 flex justify-center cursor-pointer hover:opacity-95 transition-opacity">
+          <img
+            src="/Logo_XLE.svg"
+            alt="Xa Lộ English Logo"
+            className="w-16 sm:w-22 md:w-24 h-auto object-contain"
+          />
+        </div>
 
-      {/* Stats Section (Unboxed, directly on page with brand color #9494FF) */}
-      <div className="w-full max-w-3xl lg:max-w-4xl py-4 sm:py-6 px-4 mb-8">
-        <div className="grid grid-cols-3 gap-4 text-center items-center divide-x divide-border/60">
-          <div className="flex flex-col items-center px-2">
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#9494FF] tracking-tight">
-              1000+
-            </span>
-            <span className="text-xs sm:text-sm md:text-base font-semibold text-muted-foreground tracking-wider mt-1.5 uppercase">
-              HỌC VIÊN
-            </span>
-          </div>
+        {/* Main Title & Tagline */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#6A5ACD] tracking-tight mb-2 mt-4">
+          Xa Lộ English
+        </h1>
+        <div className="w-full max-w-5xl mx-auto mb-8">
+          <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] font-bold mt-4 sm:mt-8">
+            HỌC ĐÚNG CÁCH KHI HIỂU ĐÚNG MÌNH
+          </p>
+          <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
+            CÙNG QUY TRÌNH CHẨN CHỮA
+          </p>
+        </div>
 
-          <div className="flex flex-col items-center px-2">
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#9494FF] tracking-tight">
-              98%
-            </span>
-            <span className="text-xs sm:text-sm md:text-base font-semibold text-muted-foreground tracking-wider mt-1.5 uppercase">
-              ĐẠT MỤC TIÊU
-            </span>
-          </div>
+        {/* Stats Section (Unboxed, directly on page with brand color #9494FF) */}
+        <div className="w-full max-w-3xl lg:max-w-4xl py-4 sm:py-6 px-4 mb-8">
+          <div className="grid grid-cols-3 gap-4 text-center items-center divide-x divide-border/60">
+            <div className="flex flex-col items-center px-2">
+              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#9494FF] tracking-tight">
+                1000+
+              </span>
+              <span className="text-xs sm:text-sm md:text-base font-semibold text-muted-foreground tracking-wider mt-1.5 uppercase">
+                HỌC VIÊN
+              </span>
+            </div>
 
-          <div className="flex flex-col items-center px-2">
-            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#9494FF] tracking-tight">
-              8.0+
-            </span>
-            <span className="text-xs sm:text-sm md:text-base font-semibold text-muted-foreground tracking-wider mt-1.5 uppercase">
-              IELTS MENTOR
-            </span>
+            <div className="flex flex-col items-center px-2">
+              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#9494FF] tracking-tight">
+                98%
+              </span>
+              <span className="text-xs sm:text-sm md:text-base font-semibold text-muted-foreground tracking-wider mt-1.5 uppercase">
+                ĐẠT MỤC TIÊU
+              </span>
+            </div>
+
+            <div className="flex flex-col items-center px-2">
+              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#9494FF] tracking-tight">
+                8.0+
+              </span>
+              <span className="text-xs sm:text-sm md:text-base font-semibold text-muted-foreground tracking-wider mt-1.5 uppercase">
+                IELTS MENTOR
+              </span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Social Media Section */}
-      <div className="mb-6">
-        <SocialBar />
-      </div>
+        {/* Social Media Section */}
+        <div className="mb-6">
+          <SocialBar />
+        </div>
 
-      {/* Hotline Info */}
-      <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center space-y-2 px-4 text-center">
-        <button
-          onClick={copyHotline}
-          className="inline-flex items-center justify-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground hover:text-[#FE7789] transition-colors cursor-pointer group text-center"
-          title="Bấm để sao chép số hotline"
-        >
-          <Phone className="w-7 h-7 sm:w-8 sm:h-8 text-foreground shrink-0" />
-          <span>Hotline: 0786688149</span>
-        </button>
+        {/* Hotline Info */}
+        <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center space-y-2 px-4 text-center">
+          <button
+            onClick={copyHotline}
+            className="inline-flex items-center justify-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground hover:text-[#FE7789] transition-colors cursor-pointer group text-center"
+            title="Bấm để sao chép số hotline"
+          >
+            <Phone className="w-7 h-7 sm:w-8 sm:h-8 text-foreground shrink-0" />
+            <span>Hotline: 0786688149</span>
+          </button>
+        </div>
       </div>
     </header>
   );

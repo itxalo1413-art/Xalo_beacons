@@ -304,7 +304,7 @@ export default function HallOfFame() {
 
             {/* Modal Header */}
             <div className="flex items-center gap-4 mb-5">
-              <div className="flex flex-col items-center justify-center w-18 h-18 rounded-2xl bg-[#FE7789] text-white shadow-md shrink-0 px-2 py-1">
+              <div className="flex flex-col items-center justify-center w-20 h-20 rounded-2xl bg-[#FE7789] text-white shadow-md shrink-0 px-2 py-1">
                 <span className="text-[9px] font-extrabold uppercase tracking-wider leading-tight">Overall</span>
                 <span className="font-black text-2xl leading-none mt-0.5">{activeStudentModal.outputScore}</span>
               </div>

@@ -86,10 +86,10 @@ export default function Header({ onShowToast }: HeaderProps) {
         Xa Lộ English
       </h1>
       <div className="w-full max-w-5xl mx-auto mb-8">
-        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] font-bold mt-12 sm:mt-8">
+        <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] font-bold mt-4 sm:mt-8">
           HỌC ĐÚNG CÁCH KHI HIỂU ĐÚNG MÌNH
         </p>
-        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-12 sm:mt-6">
+        <p className="text-xl sm:text-4xl md:text-6xl lg:text-[52px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
           CÙNG QUY TRÌNH CHẨN CHỮA
         </p>
       </div>

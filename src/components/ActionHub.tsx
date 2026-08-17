@@ -119,13 +119,17 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
         </div>
 
         {/* Student image — absolutely positioned on desktop, overlapping the right edge of the extended cards */}
-        <div className="hidden lg:block absolute top-1/3 -translate-y-1/2 -right-[10%] w-[61%] z-20 pointer-events-none">
-          <img
-            src="/images/group.png"
-            alt="Đội ngũ Học viên Xa Lộ English"
-            className="w-full h-auto object-contain object-center drop-shadow-2xl"
-            style={{ maxHeight: "1190px" }}
-          />
+        <div className="hidden lg:block absolute top-1/3 -translate-y-1/2 -right-[10%] w-[64%] z-20 pointer-events-none">
+          <div className="relative">
+            <img
+              src="/images/group.png"
+              alt="Đội ngũ Học viên Xa Lộ English"
+              className="w-full h-auto object-contain object-center drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_97%,transparent_100%)]"
+              style={{ maxHeight: "1190px" }}
+            />
+            {/* Very gentle and subtle bottom fade (3% edge, h-5) */}
+            <div className="absolute inset-x-0 bottom-0 h-5 bg-gradient-to-t from-slate-50/60 to-transparent pointer-events-none" />
+          </div>
         </div>
       </div>
     </section>

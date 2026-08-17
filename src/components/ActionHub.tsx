@@ -7,7 +7,7 @@ type Item = { label: string; href?: string };
 export function LinkGroup({
   title,
   items,
-  badgeBg = "bg-[#FF6574]",
+  badgeBg = "bg-[#9494FF]",
   onItemClick,
 }: {
   title: string;
@@ -16,15 +16,15 @@ export function LinkGroup({
   onItemClick?: (label: string) => void;
 }) {
   return (
-    <div className="rounded-[28px] border-2 border-foreground/90 bg-background/95 px-6 py-6 backdrop-blur-sm shadow-xs w-full">
-      <div className="flex justify-center mb-4">
+    <div className="rounded-[28px] border-2 border-[#9494FF] bg-background/95 px-6 py-5 backdrop-blur-sm shadow-xs w-full">
+      <div className="flex justify-center mb-3">
         <span
-          className={`inline-block rounded-full ${badgeBg} px-6 py-2 text-center text-base sm:text-xl lg:text-2xl font-black text-white uppercase tracking-wider shadow-sm border border-white/30`}
+          className={`inline-block rounded-full ${badgeBg} px-6 py-1.5 text-center text-base sm:text-xl lg:text-2xl font-black text-white uppercase tracking-wider shadow-sm border border-white/30`}
         >
           {title}
         </span>
       </div>
-      <div className="flex flex-col items-center gap-3">
+      <div className="flex flex-col items-center gap-2.5">
         {items.map((it) => {
           if (it.href) {
             return (
@@ -33,7 +33,7 @@ export function LinkGroup({
                 href={it.href}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full max-w-[460px] rounded-full border-2 border-foreground/90 bg-background px-6 py-3.5 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm block"
+                className="w-full max-w-[460px] rounded-full border-2 border-foreground/90 bg-background px-6 py-3 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm block"
               >
                 {it.label}
               </a>
@@ -44,7 +44,7 @@ export function LinkGroup({
               key={it.label}
               type="button"
               onClick={() => onItemClick?.(it.label)}
-              className="w-full max-w-[460px] rounded-full border-2 border-foreground/90 bg-background px-6 py-3.5 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm"
+              className="w-full max-w-[460px] rounded-full border-2 border-foreground/90 bg-background px-6 py-3 text-center text-sm sm:text-base md:text-lg text-foreground transition-all hover:bg-[#6A5ACD] hover:text-white hover:border-[#6A5ACD] font-bold cursor-pointer shadow-2xs hover:shadow-sm"
             >
               {it.label}
             </button>
@@ -88,10 +88,10 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
   ];
 
   return (
-    <section className="w-full max-w-6xl mx-auto mt-1 mb-10 px-4 sm:px-6">
-      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-6">
-        {/* Left Column: 3 LinkGroups with palette pill badges */}
-        <div className="w-full lg:w-[64%] space-y-5 z-10">
+    <section className="w-full max-w-7xl mx-auto mt-6 mb-10 px-4 sm:px-6">
+      <div className="relative flex flex-col lg:flex-row items-center justify-between gap-5">
+        {/* Left Column: 3 LinkGroups */}
+        <div className="w-full lg:w-[50%] space-y-2.5 z-10 flex flex-col justify-start">
           <LinkGroup
             title="NHẬN ƯU ĐÃI"
             items={group1}
@@ -101,23 +101,23 @@ export default function ActionHub({ onOpenModal }: ActionHubProps) {
           <LinkGroup
             title="TƯ VẤN - ĐĂNG KÝ"
             items={group2}
-            badgeBg="bg-[#6A5ACD]"
+            badgeBg="bg-[#9494FF]"
             onItemClick={onOpenModal}
           />
           <LinkGroup
             title="NHẬN TÀI LIỆU"
             items={group3}
-            badgeBg="bg-[#FF6574]"
+            badgeBg="bg-[#9494FF]"
             onItemClick={onOpenModal}
           />
         </div>
 
-        {/* Right Column: Student Group Cutout Visual */}
-        <div className="w-full lg:w-[48%] lg:-ml-20 flex justify-center lg:justify-end z-20 pointer-events-none sm:pointer-events-auto">
+        {/* Right Column: Student Group Cutout Visual (Hidden on mobile, visible on desktop lg) */}
+        <div className="hidden lg:flex lg:w-[62%] lg:-ml-24 justify-end items-center z-20 pointer-events-none sm:pointer-events-auto">
           <img
             src="/images/group.png"
             alt="Đội ngũ Học viên Xa Lộ English"
-            className="w-full max-w-[440px] lg:max-w-[500px] h-auto object-contain drop-shadow-xl"
+            className="w-full max-w-[760px] lg:max-w-[890px] xl:max-w-[900px] h-auto lg:h-[800px] xl:h-[820px] object-contain object-center drop-shadow-2xl"
           />
         </div>
       </div>

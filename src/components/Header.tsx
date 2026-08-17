@@ -77,10 +77,10 @@ export default function Header({ onShowToast }: HeaderProps) {
         <img
           src="/images/bg.png"
           alt=""
-          className="w-full h-full object-cover object-top opacity-[0.13]"
+          className="w-full h-full object-cover object-top opacity-[0.15]"
         />
-        {/* Gradient overlay to seamlessly fade into page background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/40 via-transparent to-slate-50" />
+        {/* Purple gradient overlay to seamlessly fade into page background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#9494FF]/25 via-purple-100/20 to-slate-50" />
       </div>
 
       {/* Header Content with z-10 */}

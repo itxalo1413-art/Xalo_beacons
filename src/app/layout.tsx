@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["vietnamese", "latin"],
+  display: "swap",
+  variable: "--font-bricolage",
+});
 
 export const metadata: Metadata = {
   title: "Xa Lộ English | Học đúng cách khi hiểu đúng mình cùng quy trình chẩn chữa",
@@ -26,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
-      <body className="antialiased selection:bg-purple-500 selection:text-white min-h-screen bg-slate-50">
+    <html lang="vi" className={bricolage.variable}>
+      <body className={`${bricolage.className} antialiased selection:bg-purple-500 selection:text-white min-h-screen bg-slate-50`}>
         {children}
       </body>
     </html>

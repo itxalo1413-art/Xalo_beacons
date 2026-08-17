@@ -103,7 +103,7 @@ export default function Header({ onShowToast }: HeaderProps) {
             HỌC ĐÚNG CÁCH KHI HIỂU ĐÚNG MÌNH
           </p>
           <p className="text-xl sm:text-4xl md:text-6xl lg:text-[40px] text-foreground tracking-tight leading-tight sm:leading-[1.15] mt-1 font-bold mt-4 sm:mt-6">
-            CÙNG <span className="text-[#FE7789] lg:text-[56px]">QUY TRÌNH CHẨN CHỮA</span>
+            CÙNG <span className="text-[#FE7789] lg:text-[70px]">QUY TRÌNH CHẨN CHỮA</span>
           </p>
         </div>
 
@@ -144,8 +144,9 @@ export default function Header({ onShowToast }: HeaderProps) {
           <SocialBar />
         </div>
 
-        {/* Hotline Info */}
-        <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center space-y-2 px-4 text-center">
+        {/* Hotline & Address Info */}
+        <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center space-y-3 px-4 text-center">
+          {/* Hotline */}
           <button
             onClick={copyHotline}
             className="inline-flex items-center justify-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground hover:text-[#FE7789] transition-colors cursor-pointer group text-center"
@@ -153,6 +154,16 @@ export default function Header({ onShowToast }: HeaderProps) {
           >
             <Phone className="w-7 h-7 sm:w-8 sm:h-8 text-foreground shrink-0" />
             <span>Hotline: 0786688149</span>
+          </button>
+
+          {/* Address */}
+          <button
+            onClick={copyAddress}
+            className="inline-flex items-center justify-center gap-2 text-base sm:text-xl md:text-2xl font-bold text-foreground hover:text-[#6A5ACD] transition-colors cursor-pointer group text-center leading-relaxed"
+            title="Bấm để sao chép địa chỉ"
+          >
+            <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#6A5ACD] shrink-0" />
+            <span>250 Nguyễn Đình Chính, phường Phú Nhuận, TPHCM</span>
           </button>
         </div>
       </div>

@@ -10,11 +10,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: [
-          "'gg sans'",
-          "'gg sans Bold'",
-          "'Plus Jakarta Sans'",
-          "'Inter'",
           "'Bricolage Grotesque'",
+          "var(--font-bricolage)",
+          "'Plus Jakarta Sans'",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",

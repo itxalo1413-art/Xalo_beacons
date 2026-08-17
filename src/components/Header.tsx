@@ -145,7 +145,7 @@ export default function Header({ onShowToast }: HeaderProps) {
         </div>
 
         {/* Hotline & Address Info */}
-        <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center space-y-3 px-4 text-center">
+        <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center space-y-3 px-4 text-center">
           {/* Hotline */}
           <button
             onClick={copyHotline}
@@ -159,10 +159,10 @@ export default function Header({ onShowToast }: HeaderProps) {
           {/* Address */}
           <button
             onClick={copyAddress}
-            className="inline-flex items-center justify-center gap-2 text-base sm:text-xl md:text-2xl font-bold text-foreground hover:text-[#6A5ACD] transition-colors cursor-pointer group text-center leading-relaxed"
+            className="inline-flex items-center justify-center gap-2.5 text-xl sm:text-2xl md:text-3xl font-extrabold text-foreground hover:text-[#6A5ACD] transition-colors cursor-pointer group text-center leading-relaxed"
             title="Bấm để sao chép địa chỉ"
           >
-            <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#6A5ACD] shrink-0" />
+            <MapPin className="w-7 h-7 sm:w-8 sm:h-8 text-[#6A5ACD] shrink-0" />
             <span>250 Nguyễn Đình Chính, phường Phú Nhuận, TPHCM</span>
           </button>
         </div>
